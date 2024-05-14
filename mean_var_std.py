@@ -2,11 +2,12 @@ import numpy as np
 import sys
 
 def calculate(my_list):
+     print(my_list[0])
      if(len(my_list)!=9):
          
          return ValueError("List must contain nine numbers.")
 
-     array=np.array(my_list,dtype=int)
+     array=np.array(my_list)
      array1=array.reshape(3,3)
      print(array1)
      calculation={}
@@ -23,8 +24,8 @@ def calculate(my_list):
     
 
 if __name__=="__main__":
-   input_str=input("enter the nine numbers sepatated by spaces: ")
-   input_list=input_str.split()
+   
+   input_list=list(map(int,input("enter the nine numbers sepatated by spaces: ").split()))
    
    try:
        
